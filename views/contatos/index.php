@@ -1,17 +1,10 @@
-<?php
-// views/contatos/index.php
-?>
-
 <div class="d-flex justify-content-between align-items-center mb-3">
     <h1 class="h3 m-0">Contatos</h1>
     <a href="?action=create" class="btn btn-primary">Novo Contato</a>
 </div>
 <form method="GET" class="card p-3 mb-4 shadow-sm">
     <input type="hidden" name="action" value="index">
-
     <div class="row g-3 align-items-end">
-
-        <!-- Nome -->
         <div class="col-12 col-md-2">
             <label class="form-label">Nome</label>
             <input 
@@ -21,8 +14,6 @@
                 value="<?= htmlspecialchars($_GET['nome'] ?? '') ?>"
             >
         </div>
-
-        <!-- Telefone -->
         <div class="col-12 col-md-2">
             <label class="form-label">Telefone</label>
             <input 
@@ -32,8 +23,6 @@
                 value="<?= htmlspecialchars($_GET['telefone'] ?? '') ?>"
             >
         </div>
-
-        <!-- CPF -->
         <div class="col-12 col-md-2">
             <label class="form-label">CPF</label>
             <input 
@@ -43,8 +32,6 @@
                 value="<?= validar_cpf_view($_GET['cpf'] ?? '') ?>"
             >
         </div>
-
-        <!-- Estado -->
         <div class="col-12 col-md-3">
             <label class="form-label">Estado</label>
             <select name="bro_id" class="form-select" id="select_estado">
@@ -60,8 +47,6 @@
                 <?php endforeach; ?>
             </select>
         </div>
-
-        <!-- Cidade -->
         <div class="col-12 col-md-3">
             <label class="form-label">Cidade</label>
             <select name="bre_id" class="form-select" id="select_cidade">
@@ -77,8 +62,6 @@
                 <?php endforeach; ?>
             </select>
         </div>
-
-        <!-- Botões de filtro -->
         <div class="col-12 d-flex gap-2 mt-2">
             <button class="btn btn-success">Filtrar</button>
             <a href="?action=index" class="btn btn-secondary">Limpar</a>

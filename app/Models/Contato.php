@@ -1,7 +1,5 @@
 <?php
 
-// app/Models/Contato.php
-
 class Contato
 {
     private \PDO $db;

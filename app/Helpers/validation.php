@@ -1,5 +1,4 @@
 <?php
-// app/Helpers/validation.php
 
 function sanitize_cpf(string $cpf): string
 {
@@ -64,7 +63,7 @@ function sanitize_telefone(string $telefone): string
     return preg_replace('/\D/', '', $telefone);
 }
 
-function validar_telefone(string $telefone): bool
+function validar_telefone_banco(string $telefone): bool
 {
     $tel = sanitize_telefone($telefone);
 

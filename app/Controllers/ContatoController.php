@@ -88,13 +88,13 @@ class ContatoController
 
         if ($telLimpo === '') {
             $errors[] = 'Telefone é obrigatório.';
-        } elseif (!validar_telefone($telLimpo)) {
+        } elseif (!validar_telefone_banco($telLimpo)) {
             $errors[] = 'Telefone informado é inválido.';
         }
 
         if (trim($cpfLimpo) === '') {
             $errors[] = 'CPF é obrigatório.';
-        } elseif (!validar_cpf($cpfLimpo)) {
+        } elseif (!validar_cpf_banco($cpfLimpo)) {
             $errors[] = 'CPF informado é inválido.';
         } else {
             if ($this->contatoModel->existsCpf($cpfLimpo)) {
@@ -206,7 +206,7 @@ class ContatoController
 
         if ($telLimpo === '') {
             $errors[] = 'Telefone é obrigatório.';
-        } elseif (!validar_telefone($telLimpo)) {
+        } elseif (!validar_telefone_banco($telLimpo)) {
             $errors[] = 'Telefone informado é inválido.';
         }
 

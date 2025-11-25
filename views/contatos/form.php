@@ -1,6 +1,4 @@
 <?php
-// views/contatos/form.php
-
 $contato = $contato ?? [
     'con_id'       => null,
     'con_nome'     => '',
@@ -45,6 +43,7 @@ $pageTitle = $isEdit ? 'Editar Contato' : 'Novo Contato';
                             name="con_nome"
                             class="form-control"
                             required
+                            maxlength="255"
                             value="<?= htmlspecialchars($contato['con_nome']) ?>"
                         >
                         <div class="form-text">Informe o nome completo do contato.</div>
